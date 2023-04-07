@@ -1,0 +1,29 @@
+David Howe
+getting this error Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at file:///C:/Users/david/Desktop/quotes.json. (Reason: CORS request not http).
+The error you're seeing is due to the Same Origin Policy, which is a security feature implemented by web browsers to prevent web pages from making requests to resources on a different domain or protocol. In this case, you're trying to load the quotes.json file from the local file system (file:// protocol), which is considered a different origin than your web page.
+
+To work around this issue, you can host your JSON file on a web server (e.g. using Apache, Nginx, or a Node.js server) and access it using the http:// protocol. Alternatively, you can use a browser extension that allows you to bypass the Same Origin Policy during development (e.g. CORS Everywhere or Moesif CORS).
+
+If you don't have access to a web server and don't want to use a browser extension, you can try running a local web server on your machine. For example, you can use Python's built-in http.server module to serve the quotes.json file:
+
+Open a terminal or command prompt and navigate to the directory that contains the quotes.json file.
+
+Run the following command to start a local web server:
+
+Copy code
+python -m http.server
+This will start a web server on port 8000 and serve files from the current directory.
+
+Open your web page in a browser and change the URL to http://localhost:8000/your-page.html (replace your-page.html with the name of your HTML file).
+
+The JavaScript code should now be able to load the quotes.json file from the local web server without triggering the Same Origin Policy.
+
+I hope this helps! Let me know if you have any other questions.
+
+
+
+
+Regenerate response
+Send a message...
+
+ChatGPT Mar 23 Version. Free Research Preview. ChatGPT may produce inaccurate information about people, places, or facts

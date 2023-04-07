@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Document Object</h1>
+<h2>The createElement() Method</h2>
+
+<p>Create a button element:</p>
+
+<script>
+const myel = document.createElement("h3");
+myel.innerHTML = "Hi David";
+document.body.appendChild(myel);
+</script>
+
+</body>
+</html>
